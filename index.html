@@ -420,13 +420,12 @@
 
         .cert-item {
             background: var(--bg-card);
-            border-radius: 16px;
-            padding: 1.5rem;
+            border-radius: 14px;
+            padding: 1.25rem;
             border: 1px solid rgba(233, 30, 140, 0.1);
             transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
+            display: flex;
+            flex-direction: column;
         }
 
         .cert-item:hover {
@@ -437,16 +436,16 @@
 
         .cert-header {
             display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
         }
 
         .cert-icon {
-            width: 50px;
-            height: 50px;
+            width: 44px;
+            height: 44px;
             background: linear-gradient(135deg, rgba(233, 30, 140, 0.15) 0%, rgba(233, 30, 140, 0.05) 100%);
-            border-radius: 12px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -454,68 +453,56 @@
         }
 
         .cert-icon i {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--primary);
         }
 
-        .cert-info h4 {
-            font-size: 1rem;
+        .cert-date {
+            background: var(--primary);
+            color: white;
+            font-size: 0.75rem;
             font-weight: 600;
-            margin-bottom: 0.25rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 20px;
+        }
+
+        .cert-info {
+            margin-bottom: 0.75rem;
+        }
+
+        .cert-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
             line-height: 1.3;
         }
 
         .cert-info .cert-issuer {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--primary);
             font-weight: 500;
         }
 
-        .cert-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .cert-date {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .cert-link {
-            font-size: 0.8rem;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .cert-item:hover .cert-link {
-            text-decoration: underline;
-        }
-
         .cert-links {
             display: flex;
-            gap: 0.75rem;
+            gap: 0.5rem;
         }
 
         .cert-links .cert-link {
-            width: 30px;
-            height: 30px;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: rgba(233, 30, 140, 0.1);
-            border-radius: 6px;
+            border-radius: 8px;
             transition: all 0.3s ease;
+            color: var(--primary);
+            text-decoration: none;
         }
 
         .cert-links .cert-link:hover {
             background: var(--primary);
-            text-decoration: none;
         }
 
         .cert-links .cert-link:hover i {
@@ -1042,17 +1029,15 @@
                     <div class="cert-icon">
                         <i class="fas fa-pencil-ruler"></i>
                     </div>
-                    <div class="cert-info">
-                        <h4>Diseño UX/UI Avanzado</h4>
-                        <span class="cert-issuer">Coderhouse</span>
-                    </div>
-                </div>
-                <div class="cert-footer">
                     <span class="cert-date">2023</span>
-                    <span class="cert-links">
-                        <a href="cert-uxui-avanzado.jpg" target="_blank" class="cert-link" title="Ver imagen"><i class="fas fa-image"></i></a>
-                        <a href="https://pub.coderhouse.com/legacy-certificates/6415bffe3342140002855e5a?lang=es" target="_blank" class="cert-link" title="Verificar en Coderhouse"><i class="fas fa-external-link-alt"></i></a>
-                    </span>
+                </div>
+                <div class="cert-info">
+                    <h4>Diseño UX/UI Avanzado</h4>
+                    <span class="cert-issuer">Coderhouse</span>
+                </div>
+                <div class="cert-links">
+                    <a href="cert-uxui-avanzado.jpg" target="_blank" class="cert-link" title="Ver imagen"><i class="fas fa-image"></i></a>
+                    <a href="https://pub.coderhouse.com/legacy-certificates/6415bffe3342140002855e5a?lang=es" target="_blank" class="cert-link" title="Verificar"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
             <div class="cert-item">
@@ -1060,17 +1045,15 @@
                     <div class="cert-icon">
                         <i class="fas fa-palette"></i>
                     </div>
-                    <div class="cert-info">
-                        <h4>Diseño UX/UI</h4>
-                        <span class="cert-issuer">Coderhouse</span>
-                    </div>
-                </div>
-                <div class="cert-footer">
                     <span class="cert-date">2022</span>
-                    <span class="cert-links">
-                        <a href="cert-uxui.jpg" target="_blank" class="cert-link" title="Ver imagen"><i class="fas fa-image"></i></a>
-                        <a href="https://pub.coderhouse.com/legacy-certificates/6382d5c2912c35000e09c81d?lang=es" target="_blank" class="cert-link" title="Verificar en Coderhouse"><i class="fas fa-external-link-alt"></i></a>
-                    </span>
+                </div>
+                <div class="cert-info">
+                    <h4>Diseño UX/UI</h4>
+                    <span class="cert-issuer">Coderhouse</span>
+                </div>
+                <div class="cert-links">
+                    <a href="cert-uxui.jpg" target="_blank" class="cert-link" title="Ver imagen"><i class="fas fa-image"></i></a>
+                    <a href="https://pub.coderhouse.com/legacy-certificates/6382d5c2912c35000e09c81d?lang=es" target="_blank" class="cert-link" title="Verificar"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
             <div class="cert-item">
@@ -1078,16 +1061,14 @@
                     <div class="cert-icon">
                         <i class="fas fa-bug"></i>
                     </div>
-                    <div class="cert-info">
-                        <h4>ISTQB Certified Tester Foundation Level</h4>
-                        <span class="cert-issuer">Testing IT</span>
-                    </div>
-                </div>
-                <div class="cert-footer">
                     <span class="cert-date">2025</span>
-                    <span class="cert-links">
-                        <a href="cert-istqb.pdf" target="_blank" class="cert-link" title="Ver certificado"><i class="fas fa-file-pdf"></i></a>
-                    </span>
+                </div>
+                <div class="cert-info">
+                    <h4>ISTQB Certified Tester</h4>
+                    <span class="cert-issuer">Testing IT</span>
+                </div>
+                <div class="cert-links">
+                    <a href="cert-istqb.pdf" target="_blank" class="cert-link" title="Ver certificado"><i class="fas fa-file-pdf"></i></a>
                 </div>
             </div>
             <div class="cert-item">
@@ -1095,17 +1076,15 @@
                     <div class="cert-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <div class="cert-info">
-                        <h4>Pilares de Marketing Digital</h4>
-                        <span class="cert-issuer">Coursera - Universidad Austral</span>
-                    </div>
-                </div>
-                <div class="cert-footer">
                     <span class="cert-date">2020</span>
-                    <span class="cert-links">
-                        <a href="cert-marketing.pdf" target="_blank" class="cert-link" title="Ver certificado"><i class="fas fa-file-pdf"></i></a>
-                        <a href="https://coursera.org/verify/KNHQMJEPNSMS" target="_blank" class="cert-link" title="Verificar en Coursera"><i class="fas fa-external-link-alt"></i></a>
-                    </span>
+                </div>
+                <div class="cert-info">
+                    <h4>Marketing Digital</h4>
+                    <span class="cert-issuer">Coursera - Univ. Austral</span>
+                </div>
+                <div class="cert-links">
+                    <a href="cert-marketing.pdf" target="_blank" class="cert-link" title="Ver certificado"><i class="fas fa-file-pdf"></i></a>
+                    <a href="https://coursera.org/verify/KNHQMJEPNSMS" target="_blank" class="cert-link" title="Verificar"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
