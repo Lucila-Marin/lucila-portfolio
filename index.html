@@ -318,9 +318,213 @@
             transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
+        /* Tools Section */
+        .tools {
+            background: var(--bg-darker);
+            padding: 4rem 10%;
+        }
+
+        .tools-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tool-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid rgba(233, 30, 140, 0.1);
+            min-width: 120px;
+            transition: all 0.3s ease;
+        }
+
+        .tool-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .tool-item i,
+        .tool-item svg {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .adobe-icon {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--primary);
+            border-radius: 6px;
+        }
+
+        .tool-item span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .tool-item:hover span {
+            color: var(--text-light);
+        }
+
+        .tools-note {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .tools-note i {
+            color: var(--primary);
+            margin-right: 0.5rem;
+        }
+
+        /* Certifications Section */
+        .certifications {
+            background: var(--bg-dark);
+            padding: 5rem 10%;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1100px) {
+            .cert-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .cert-item {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid rgba(233, 30, 140, 0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .cert-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .cert-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .cert-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, rgba(233, 30, 140, 0.15) 0%, rgba(233, 30, 140, 0.05) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .cert-icon i {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .cert-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            line-height: 1.3;
+        }
+
+        .cert-info .cert-issuer {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .cert-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .cert-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .cert-link {
+            font-size: 0.8rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .cert-item:hover .cert-link {
+            text-decoration: underline;
+        }
+
+        .cert-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .cert-links .cert-link {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(233, 30, 140, 0.1);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .cert-links .cert-link:hover {
+            background: var(--primary);
+            text-decoration: none;
+        }
+
+        .cert-links .cert-link:hover i {
+            color: white;
+        }
+
         /* Curriculum Section */
         .curriculum {
-            background: var(--bg-darker);
+            background: var(--bg-dark);
         }
 
         .timeline-container {
@@ -376,6 +580,27 @@
         .timeline-item p {
             color: var(--text-muted);
             font-size: 0.9rem;
+        }
+
+        .timeline-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .timeline-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-links a:hover {
+            color: var(--primary-light);
+            text-decoration: underline;
         }
 
         /* Portfolio Section */
@@ -635,6 +860,8 @@
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#sobre-mi">Sobre Mí</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#herramientas">Herramientas</a></li>
+            <li><a href="#certificaciones">Certificaciones</a></li>
             <li><a href="#curriculum">Curriculum</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contacto">Contacto</a></li>
@@ -771,6 +998,119 @@
         </div>
     </section>
 
+    <!-- Tools Section -->
+    <section class="tools" id="herramientas">
+        <h2 class="section-title">Herramientas</h2>
+        <div class="tools-grid">
+            <div class="tool-item">
+                <i class="fab fa-figma"></i>
+                <span>Figma</span>
+            </div>
+            <div class="tool-item">
+                <i class="fab fa-figma"></i>
+                <span>FigJam</span>
+            </div>
+            <div class="tool-item">
+                <span class="adobe-icon">Ps</span>
+                <span>Photoshop</span>
+            </div>
+            <div class="tool-item">
+                <span class="adobe-icon">Ai</span>
+                <span>Illustrator</span>
+            </div>
+            <div class="tool-item">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+            </div>
+            <div class="tool-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+            </div>
+        </div>
+        <p class="tools-note">
+            <i class="fas fa-robot"></i>
+            Integración de Figma con herramientas de IA mediante conectores MCP
+        </p>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications" id="certificaciones">
+        <h2 class="section-title">Certificaciones</h2>
+        <div class="cert-grid">
+            <div class="cert-item">
+                <div class="cert-header">
+                    <div class="cert-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Diseño UX/UI Avanzado</h4>
+                        <span class="cert-issuer">Coderhouse</span>
+                    </div>
+                </div>
+                <div class="cert-footer">
+                    <span class="cert-date">2023</span>
+                    <span class="cert-links">
+                        <a href="cert-uxui-avanzado.jpg" target="_blank" class="cert-link" title="Ver imagen"><i class="fas fa-image"></i></a>
+                        <a href="https://pub.coderhouse.com/legacy-certificates/6415bffe3342140002855e5a?lang=es" target="_blank" class="cert-link" title="Verificar en Coderhouse"><i class="fas fa-external-link-alt"></i></a>
+                    </span>
+                </div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-header">
+                    <div class="cert-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Diseño UX/UI</h4>
+                        <span class="cert-issuer">Coderhouse</span>
+                    </div>
+                </div>
+                <div class="cert-footer">
+                    <span class="cert-date">2022</span>
+                    <span class="cert-links">
+                        <a href="cert-uxui.jpg" target="_blank" class="cert-link" title="Ver imagen"><i class="fas fa-image"></i></a>
+                        <a href="https://pub.coderhouse.com/legacy-certificates/6382d5c2912c35000e09c81d?lang=es" target="_blank" class="cert-link" title="Verificar en Coderhouse"><i class="fas fa-external-link-alt"></i></a>
+                    </span>
+                </div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-header">
+                    <div class="cert-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>ISTQB Certified Tester Foundation Level</h4>
+                        <span class="cert-issuer">Testing IT</span>
+                    </div>
+                </div>
+                <div class="cert-footer">
+                    <span class="cert-date">2025</span>
+                    <span class="cert-links">
+                        <a href="cert-istqb.pdf" target="_blank" class="cert-link" title="Ver certificado"><i class="fas fa-file-pdf"></i></a>
+                    </span>
+                </div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-header">
+                    <div class="cert-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Pilares de Marketing Digital</h4>
+                        <span class="cert-issuer">Coursera - Universidad Austral</span>
+                    </div>
+                </div>
+                <div class="cert-footer">
+                    <span class="cert-date">2020</span>
+                    <span class="cert-links">
+                        <a href="cert-marketing.pdf" target="_blank" class="cert-link" title="Ver certificado"><i class="fas fa-file-pdf"></i></a>
+                        <a href="https://coursera.org/verify/KNHQMJEPNSMS" target="_blank" class="cert-link" title="Verificar en Coursera"><i class="fas fa-external-link-alt"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Curriculum Section -->
     <section class="curriculum" id="curriculum">
         <h2 class="section-title">Curriculum</h2>
@@ -782,18 +1122,39 @@
                     <p class="institution">Testing IT</p>
                     <p class="date">2025</p>
                     <p>Diseño de pruebas, Testing exploratorio y de regresión, Técnicas de prueba.</p>
+                    <p class="timeline-links">
+                        <a href="cert-istqb.pdf" target="_blank" title="Ver certificado"><i class="fas fa-file-pdf"></i> Ver certificado</a>
+                    </p>
                 </div>
                 <div class="timeline-item">
                     <h4>Diseño UX/UI Avanzado</h4>
                     <p class="institution">Coderhouse</p>
                     <p class="date">2023</p>
                     <p>Investigación exploratoria, Perfil de usuario, Prototipado, Componentes y animaciones.</p>
+                    <p class="timeline-links">
+                        <a href="cert-uxui-avanzado.jpg" target="_blank" title="Ver certificado"><i class="fas fa-image"></i> Ver certificado</a>
+                        <a href="https://pub.coderhouse.com/legacy-certificates/6415bffe3342140002855e5a?lang=es" target="_blank" title="Verificar en Coderhouse"><i class="fas fa-external-link-alt"></i> Verificar</a>
+                    </p>
                 </div>
                 <div class="timeline-item">
                     <h4>Diseño UX/UI Inicial</h4>
                     <p class="institution">Coderhouse</p>
                     <p class="date">2022</p>
                     <p>UI kits y moodboards, Arquitectura de la información, Pruebas de usabilidad.</p>
+                    <p class="timeline-links">
+                        <a href="cert-uxui.jpg" target="_blank" title="Ver certificado"><i class="fas fa-image"></i> Ver certificado</a>
+                        <a href="https://pub.coderhouse.com/legacy-certificates/6382d5c2912c35000e09c81d?lang=es" target="_blank" title="Verificar en Coderhouse"><i class="fas fa-external-link-alt"></i> Verificar</a>
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Pilares de Marketing Digital</h4>
+                    <p class="institution">Coursera - Universidad Austral</p>
+                    <p class="date">2020</p>
+                    <p>Fundamentos del marketing digital, estrategias de comunicación y análisis de métricas.</p>
+                    <p class="timeline-links">
+                        <a href="cert-marketing.pdf" target="_blank" title="Ver certificado"><i class="fas fa-file-pdf"></i> Ver certificado</a>
+                        <a href="https://coursera.org/verify/KNHQMJEPNSMS" target="_blank" title="Verificar en Coursera"><i class="fas fa-external-link-alt"></i> Verificar</a>
+                    </p>
                 </div>
             </div>
             <div class="timeline-column">
